@@ -46,6 +46,8 @@ def infoUltimaCorrida():
     - Lugar: {infoUltimaCorrida['location']}
     
     {infoUltimaCorrida['summary']}
+    
+    -------------------------------------------------------------
     '''))
     
 def infoProxCorrida():
@@ -66,6 +68,8 @@ def infoProxCorrida():
     - Equipes participantes:
     
     {', '.join(map(str, infoProxCorrida['teams']))}
+    
+    -------------------------------------------------------------
     '''))
     
 def rankingEquipes():
@@ -86,6 +90,7 @@ def rankingEquipes():
         print(f'{i}° - {equipe['name']} | {equipe['victories']} vitórias')
         i += 1
     
+    print('-------------------------------------------------------------')
 
 print('''
 -------------------------------------------------------------
@@ -112,13 +117,29 @@ while True:
 
     if opcao == '1':
         quiz()
+        cont = int(input('Deseja continuar?\n 1 - SIM\n 2 - NÃO\n'))
+        if cont == 2:
+            break
+        
     elif opcao == '2':
         infoUltimaCorrida()
+        cont = int(input('Deseja continuar?\n 1 - SIM\n 2 - NÃO\n'))
+        if cont == 2:
+            break
+        
     elif opcao == '3':
         infoProxCorrida()
+        cont = int(input('Deseja continuar?\n 1 - SIM\n 2 - NÃO\n'))
+        if cont == 2:
+            break
+        
     elif opcao == '4':
         rankingEquipes()
+        cont = int(input('Deseja continuar?\n 1 - SIM\n 2 - NÃO\n'))
+        if cont == 2:
+            break
         
-
-    break
+    else:
+        print('***Opção inválida!***')
+        
 
