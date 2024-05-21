@@ -48,6 +48,26 @@ def infoUltimaCorrida():
     {infoUltimaCorrida['summary']}
     '''))
     
+def infoProxCorrida():
+    f = open('infoProxCorrida.json')
+    infoProxCorrida = json.load(f)['info']
+    
+    print(textwrap.dedent(f'''
+    -------------------------------------------------------------
+    ------------INFORMAÇÕES SOBRE A PRÓXIMA CORRIDA--------------
+    -------------------------------------------------------------
+    
+    - Data: {infoProxCorrida['date']}
+    
+    - Hora: {infoProxCorrida['time']}
+    
+    - Lugar: {infoProxCorrida['location']}
+    
+    - Equipes participantes:
+    
+    {', '.join(map(str, infoProxCorrida['teams']))}
+    '''))
+    
     
 print('''
 -------------------------------------------------------------
@@ -76,6 +96,9 @@ while True:
         quiz()
     elif opcao == '2':
         infoUltimaCorrida()
+    elif opcao == '3':
+        infoProxCorrida()
+        
 
     break
 
