@@ -1,0 +1,52 @@
+{"perguntasQuiz": [
+  {
+    "question": "Qual foi o ano de estreia da Formula E?",
+    "options": [
+      "a) 2012",
+      "b) 2014",
+      "c) 2016",
+      "d) 2018"
+    ],
+    "answer": "b"
+  },
+  {
+    "question": "Qual cidade sediou a primeira corrida da Formula E?",
+    "options": [
+      "a) Paris",
+      "b) Berlim",
+      "c) Pequim",
+      "d) Nova Iorque"
+    ],
+    "answer": "c"
+  },
+  {
+    "question": "Quem foi o primeiro campeão da Formula E?",
+    "options": [
+      "a) Sebastien Buemi",
+      "b) Lucas di Grassi",
+      "c) Jean-Éric Vergne",
+      "d) Nelson Piquet Jr."
+    ],
+    "answer": "d"
+  },
+  {
+    "question": "Qual equipe ganhou o campeonato de construtores na temporada inaugural?",
+    "options": [
+      "a) Renault e.dams",
+      "b) Audi Sport ABT",
+      "c) Virgin Racing",
+      "d) Mahindra Racing"
+    ],
+    "answer": "a"
+  },
+  {
+    "question": "Quantos carros uma equipe pode utilizar durante uma corrida atualmente?",
+    "options": [
+      "a) 1",
+      "b) 2",
+      "c) 3",
+      "d) 4"
+    ],
+    "answer": "a"
+  }
+]}
