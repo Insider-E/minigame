@@ -1,0 +1,48 @@
+{
+    "teams": [
+        {
+            "name": "ABT Cupra",
+            "victories": 14
+        },
+        {
+            "name": "Andretti",
+            "victories": 11
+        },
+        {
+            "name": "DS Penske",
+            "victories": 3
+        },
+        {
+            "name": "Envision Racing",
+            "victories": 16
+        },
+        {
+            "name": "ERT",
+            "victories": 2
+        },
+        {
+            "name": "Jaguar TCS Racing",
+            "victories": 15
+        },
+        {
+            "name": "Mahindra Racing",
+            "victories": 5
+        },
+        {
+            "name": "Maserati MSG Racing",
+            "victories": 10
+        },
+        {
+            "name": "NEOM McLaren",
+            "victories": 8
+        },
+        {
+            "name": "Nissan",
+            "victories": 18
+        },
+        {
+            "name": "Tag Heuer Porsche",
+            "victories": 8
+        }
+    ]
+}

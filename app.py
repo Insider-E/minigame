@@ -68,7 +68,25 @@ def infoProxCorrida():
     {', '.join(map(str, infoProxCorrida['teams']))}
     '''))
     
+def rankingEquipes():
+    f = open('equipes.json')
+    equipes = json.load(f)['teams']
     
+    print(textwrap.dedent(f'''
+    -------------------------------------------------------------
+    ---------------------RANKING DE EQUIPES----------------------
+    -------------------------------------------------------------
+    '''))
+    
+    equipesOrdenadas = sorted(equipes, key=lambda equipe: equipe['victories'], reverse=True)
+    
+    i = 1
+    
+    for equipe in equipesOrdenadas:
+        print(f'{i}° - {equipe['name']} | {equipe['victories']} vitórias')
+        i += 1
+    
+
 print('''
 -------------------------------------------------------------
 ----------------SEJA BEM VINDO(A) À INSIDER-E----------------
@@ -98,6 +116,8 @@ while True:
         infoUltimaCorrida()
     elif opcao == '3':
         infoProxCorrida()
+    elif opcao == '4':
+        rankingEquipes()
         
 
     break
