@@ -1,10 +1,54 @@
 import textwrap
 import json
-f = open('perguntas.json')
-perguntas = json.load(f)
 
-print(perguntas)
-
+def quiz():
+    f = open('perguntas.json')
+    perguntas = json.load(f)
+    
+    pontos = 0
+        
+    print(textwrap.dedent('''
+    -------------------------------------------------------------
+    ---------------BEM-VINDO(A) AO QUIZ INSIDER-E!---------------
+    -------------------------------------------------------------
+        
+    - Lembre-se de responder sempre com a letra da alternativa correspondente.
+    - Cada alternativa correta vale 5 PONTOS.
+    '''))
+        
+    for pergunta in perguntas['perguntasQuiz']:
+        resposta = input(f'{pergunta['question']}\n{' '.join(map(str, pergunta['options']))}\n')
+            
+        if resposta.upper() == pergunta['answer'].upper():
+            pontos += 5
+        
+    print(textwrap.dedent(f'''
+    -------------------------------------------------------------
+    ---------------SUA PONTUAÇÃO FOI DE {pontos} PONTOS----------------
+    -------------------------------------------------------------
+    '''))
+    
+    return pontos
+        
+def infoUltimaCorrida():
+    f = open('infoUltimaCorrida.json')
+    infoUltimaCorrida = json.load(f)['info']
+    
+    print(textwrap.dedent(f'''
+    -------------------------------------------------------------
+    ------------INFORMAÇÕES SOBRE A ÚLTIMA CORRIDA---------------
+    -------------------------------------------------------------
+    
+    - Data: {infoUltimaCorrida['date']}
+    
+    - Ganhador: {infoUltimaCorrida['winner']}
+    
+    - Lugar: {infoUltimaCorrida['location']}
+    
+    {infoUltimaCorrida['summary']}
+    '''))
+    
+    
 print('''
 -------------------------------------------------------------
 ----------------SEJA BEM VINDO(A) À INSIDER-E----------------
@@ -29,28 +73,9 @@ while True:
     '''))
 
     if opcao == '1':
-        pontos = 0
-        
-        print(textwrap.dedent('''
-        -------------------------------------------------------------
-        ---------------BEM-VINDO(A) AO QUIZ INSIDER-E!---------------
-        -------------------------------------------------------------
-        
-        - Lembre-se de responder sempre com a letra da alternativa correspondente.
-        - Cada alternativa correta vale 5 PONTOS.
-            '''))
-        
-        for pergunta in perguntas['perguntasQuiz']:
-            resposta = input(f'{pergunta['question']}\n{' '.join(map(str, pergunta['options']))}\n')
-            
-            if resposta.upper() == pergunta['answer'].upper():
-                pontos += 5
-        
-        print(textwrap.dedent(f'''
-        -------------------------------------------------------------
-        ---------------SUA PONTUAÇÃO FOI DE {pontos} PONTOS----------------
-        -------------------------------------------------------------
-                              '''))
+        quiz()
+    elif opcao == '2':
+        infoUltimaCorrida()
 
     break
 
