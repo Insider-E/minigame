@@ -65,7 +65,6 @@ Este repositório contém o código-fonte e a documentação para um aplicativo 
 - David Murillo de Oliveira Soares (RM 559078)
 - Davi dos Reis Garcia (RM 556741)
 - Yasmin Gonçalves Coelho (RM 559147)
-- Yasmin Naomi Minemoto (RM 559154)
 
 
 ## Contribuições
