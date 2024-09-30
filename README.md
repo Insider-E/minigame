@@ -60,6 +60,9 @@ Este repositório contém o código-fonte e a documentação para um aplicativo 
 
     João, digite o código referente à opção que deseja:
 
+## Fluxo de atividades
+![Diagrama de atividade](./assets/fluxograma.png)
+
 ## Integrantes:
 
 - David Murillo de Oliveira Soares (RM 559078)

@@ -24,7 +24,7 @@ def quiz():
     for pergunta in perguntas['perguntasQuiz']:
         #' '.join(map(str, pergunta['options'])) = passa por todos os elementos de 'pergunta['options']' usando o map e
         #concatena todos em uma string, separando com espaço
-        resposta = input(f'{pergunta['question']}\n{' '.join(map(str, pergunta['options']))}\n')
+        resposta = input(f'{pergunta["question"]}\n{" ".join(map(str, pergunta["options"]))}\n')
            
         #Verifica se a resposta digitada está correta e acumula 5 pontos para o usuário 
         if resposta.upper() == pergunta['answer'].upper():
